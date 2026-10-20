@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Oxi Fresh LSA Review</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: sticky nav band over a single scrolling column of banded sections; tables scroll inside their own wells. */
+:root{
+  --ink:#16191c; --ink-2:#4a5560; --ink-3:#78848f;
+  --paper:#f7f6f3; --card:#ffffff; --line:#e0ddd6;
+  --brand:#1f3864; --brand-soft:#e8edf6;
+  --good:#1d7a4c; --good-soft:#e2f2e9;
+  --bad:#b3261e; --bad-soft:#fbe7e5;
+  --warn:#9a6700; --warn-soft:#fdf2d9;
+  --z1:#2e9e4f; --z2:#e08a1e; --z3:#2196c4; --z4:#7a46a8; --z5:#c23fa8;
+  --display:'Archivo',system-ui,sans-serif;
+  --body:'Source Sans 3',system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ink:#eceff2; --ink-2:#aab4bf; --ink-3:#7d8893;
+  --paper:#14171a; --card:#1d2126; --line:#2f353c;
+  --brand:#8fb3e8; --brand-soft:#1c2740;
+  --good:#5fcf92; --good-soft:#15301f;
+  --bad:#ef8279; --bad-soft:#36191a;
+  --warn:#e3b44c; --warn-soft:#332714;
+  --z1:#4cc471; --z2:#f0a540; --z3:#48b6df; --z4:#a06fd0; --z5:#dc6bc4;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --ink:#eceff2; --ink-2:#aab4bf; --ink-3:#7d8893;
+  --paper:#14171a; --card:#1d2126; --line:#2f353c;
+  --brand:#8fb3e8; --brand-soft:#1c2740;
+  --good:#5fcf92; --good-soft:#15301f;
+  --bad:#ef8279; --bad-soft:#36191a;
+  --warn:#e3b44c; --warn-soft:#332714;
+  --z1:#4cc471; --z2:#f0a540; --z3:#48b6df; --z4:#a06fd0; --z5:#dc6bc4;
+  color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.2}
+p{margin:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:20;background:var(--brand)}
+header.top{background:var(--brand);color:#fff}
+:root[data-theme="dark"] header.top,:root:not([data-theme="light"]) header.top{color:#0f1419}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]) header.top{color:#fff}}
+header.top .wrap{padding-block:28px 24px;display:flex;flex-wrap:wrap;gap:18px;align-items:flex-end;justify-content:space-between}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.82}
+header.top h1{font-size:clamp(25px,4.4vw,38px);font-weight:700;letter-spacing:-.015em}
+header.top .sub{font-size:15px;opacity:.86;margin-top:4px}
+.period{font-family:var(--mono);font-size:12.5px;opacity:.9;text-align:right}
+nav.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:15;background:var(--card);border-bottom:1px solid var(--line)}
+nav.tabs .wrap{display:flex;gap:2px;overflow-x:auto;padding-block:0}
+nav.tabs button{appearance:none;background:none;border:0;border-bottom:2.5px solid transparent;color:var(--ink-2);
+  font-family:var(--display);font-size:13.5px;font-weight:600;padding:13px 13px 11px;cursor:pointer;white-space:nowrap}
+nav.tabs button:hover{color:var(--ink)}
+nav.tabs button[aria-selected="true"]{color:var(--brand);border-bottom-color:var(--brand)}
+nav.tabs button:focus-visible{outline:2px solid var(--brand);outline-offset:-3px}
+section.band{padding-block:34px 42px}
+section.band+section.band{border-top:1px solid var(--line)}
+.lede{color:var(--ink-2);max-width:66ch;font-size:16.5px}
+h2.sec{font-size:22px;font-weight:700;letter-spacing:-.01em}
+h3.sub{font-size:15px;font-weight:600;letter-spacing:.02em;color:var(--ink-2);margin-top:30px;margin-bottom:10px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:22px}
+.kpi{background:var(--card);padding:16px 17px 15px;min-width:0}
+.kpi .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.kpi .v{font-family:var(--display);font-size:27px;font-weight:700;letter-spacing:-.02em;margin-top:5px;
+  font-variant-numeric:tabular-nums}
+.kpi .n{font-size:12.5px;color:var(--ink-3);margin-top:3px}
+.v.good{color:var(--good)} .v.bad{color:var(--bad)}
+.verdict{margin-top:24px;border:1px solid var(--line);border-left:4px solid var(--bad);background:var(--bad-soft);
+  border-radius:8px;padding:17px 19px}
+.verdict.ok{border-left-color:var(--good);background:var(--good-soft)}
+.verdict h3{font-family:var(--display);font-size:16px;font-weight:700;margin-bottom:6px}
+.verdict p{font-size:15px;color:var(--ink-2)}
+.verdict p+p{margin-top:7px}
+.well{margin-top:20px;border:1px solid var(--line);border-radius:10px;background:var(--card);overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:min-content;font-size:13.5px;font-variant-numeric:tabular-nums}
+thead th{background:var(--brand);color:#fff;font-family:var(--display);font-size:11.5px;font-weight:600;
+  letter-spacing:.03em;text-align:right;padding:10px 11px;white-space:nowrap;position:sticky;top:0}
+:root[data-theme="dark"] thead th,:root:not([data-theme="light"]) thead th{color:#0f1419}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]) thead th{color:#fff}}
+thead th:first-child,tbody td:first-child{text-align:left}
+tbody td{padding:9px 11px;text-align:right;border-top:1px solid var(--line);white-space:nowrap}
+tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--line) 26%,transparent)}
+tbody tr.tot td{font-weight:700;background:var(--brand-soft);border-top:2px solid var(--brand)}
+td.pos{color:var(--good);font-weight:600} td.neg{color:var(--bad);font-weight:600}
+.zchip{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:7px;vertical-align:-1px}
+.pill{display:inline-block;font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.05em;
+  padding:2px 7px;border-radius:999px}
+.pill.on{background:var(--good-soft);color:var(--good)}
+.pill.off{background:var(--bad-soft);color:var(--bad)}
+figure{margin:22px 0 0}
+figcaption{font-size:13px;color:var(--ink-3);margin-top:9px}
+svg{display:block;max-width:100%;height:auto}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:26px;margin-top:8px}
+.grid2>*{min-width:0}
+.lever{border:1px solid var(--line);border-radius:10px;background:var(--card);padding:17px 19px}
+.lever .n{font-family:var(--mono);font-size:11px;color:var(--ink-3);letter-spacing:.09em}
+.lever h4{font-family:var(--display);font-size:16.5px;font-weight:700;margin:5px 0 10px}
+.lever .big{font-family:var(--display);font-size:25px;font-weight:700;color:var(--good);
+  font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.lever .from{font-size:13.5px;color:var(--ink-2);margin-top:4px}
+.lever .how{font-size:13.5px;color:var(--ink-3);margin-top:11px;border-top:1px solid var(--line);padding-top:10px}
+ul.notes{margin:18px 0 0;padding-left:19px;color:var(--ink-2);font-size:14.5px}
+ul.notes li{margin-bottom:7px}
+ul.notes li::marker{color:var(--ink-3)}
+.src{margin-top:26px;font-size:13.5px;color:var(--ink-3);border-top:1px solid var(--line);padding-top:16px}
+.src b{color:var(--ink-2);font-weight:600}
+.src p+p{margin-top:8px}
+footer.foot{background:var(--card);border-top:1px solid var(--line)}
+footer.foot .wrap{padding-block:22px 30px;font-size:13px;color:var(--ink-3)}
+@media(max-width:560px){
+  .kpi .v{font-size:23px}
+  header.top .period{text-align:left}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+<style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div>
+    <div class="eyebrow">Oxi Fresh Carpet Cleaning &middot; Northeast Florida</div>
+    <h1>Local Services Ads Review</h1>
+    <div class="sub">Lead performance, zone breakdown and channel economics</div>
+  </div>
+  <div class="period">January 1 &ndash; September 30, 2026<br>Prepared by Joynavi B. Manalo</div>
+</div></header>
+
+<nav class="tabs"><div class="wrap" role="tablist" id="tabs"></div></nav>
+
+<main>
+<section class="band" id="p-overview"><div class="wrap">
+  <h2 class="sec">Where the channel stands</h2>
+  <p class="lede">Nine months of Local Services Ads, measured against what the jobs actually leave behind once labor, the job fee and the franchise fee are paid.</p>
+  <div class="kpis" id="kpis"></div>
+  <div class="verdict" id="verdict"></div>
+  <figure>
+    <div id="chart-net"></div>
+    <figcaption>Monthly result after job delivery costs and Google&rsquo;s billing. Green months cover their cost; red months do not.</figcaption>
+  </figure>
+  <h3 class="sub">Quarter by quarter</h3>
+  <div class="well"><table id="t-qtr"></table></div>
+</div></section>
+
+<section class="band" id="p-monthly" hidden><div class="wrap">
+  <h2 class="sec">Month by month</h2>
+  <p class="lede">Charged calls and what became of them, alongside the jobs the CRM recorded and the revenue they produced.</p>
+  <div class="well"><table id="t-month"></table></div>
+  <figure>
+    <div id="chart-rates"></div>
+    <figcaption>How each month&rsquo;s charged calls resolved, as a share of all charged calls.</figcaption>
+  </figure>
+  <figure>
+    <div id="chart-revcost"></div>
+    <figcaption>Gross invoiced revenue against the amount Google billed.</figcaption>
+  </figure>
+</div></section>
+
+<section class="band" id="p-zones" hidden><div class="wrap">
+  <h2 class="sec">By zone</h2>
+  <p class="lede">Four numbered zones plus Putnam County, which needs approval before booking. Jobs and revenue are assigned by each job&rsquo;s own zip code; leads and quotes by service location.</p>
+  <div class="well"><table id="t-zone"></table></div>
+  <figure>
+    <div id="chart-zone"></div>
+    <figcaption>Nine-month result by zone after delivery costs and allocated ad spend.</figcaption>
+  </figure>
+  <h3 class="sub">Revenue trend by zone</h3>
+  <figure>
+    <div id="chart-ztrend"></div>
+    <figcaption>Monthly revenue by zone. Zone 2 thins out from July, when its geo-targets were switched off.</figcaption>
+  </figure>
+</div></section>
+
+<section class="band" id="p-zips" hidden><div class="wrap">
+  <h2 class="sec">By zip code</h2>
+  <p class="lede">Every zip code with GG5000 activity, ranked by revenue. ON means the zip is an active Google Business Profile geo-target; OFF zips still produce work through organic and referral channels.</p>
+  <div class="well"><table id="t-zip"></table></div>
+</div></section>
+
+<section class="band" id="p-locs" hidden><div class="wrap">
+  <h2 class="sec">By service location</h2>
+  <p class="lede">The validation workbook reports leads by location rather than zip. Conversion is the clearest separator between the locations that pay their way and those that do not.</p>
+  <div class="well"><table id="t-loc"></table></div>
+  <figure>
+    <div id="chart-loc"></div>
+    <figcaption>Lead-to-job conversion by location, against the rate needed to break even.</figcaption>
+  </figure>
+</div></section>
+
+<section class="band" id="p-gap" hidden><div class="wrap">
+  <h2 class="sec">Closing the gap</h2>
+  <p class="lede">Three routes to break-even. Each assumes the other two stay where they are, so a combination of smaller movements would get there more comfortably.</p>
+  <div class="grid2" id="levers"></div>
+  <h3 class="sub">What the costs cover</h3>
+  <div class="well"><table id="t-cost"></table></div>
+  <div class="src" id="src"></div>
+</div></section>
+</main>
+
+<footer class="foot"><div class="wrap">
+  Oxi Fresh Carpet Cleaning of Northeast Florida &middot; Google Local Services Ads &middot; January&ndash;September 2026
+</div></footer>
+<script>
+const DATA={"months":[{"m":"Jan","calls":123.0,"booked":66.0,"lsacomp":50.0,"quo":39.0,"noq":18.0,"leads":122.0,"cost":6729.81,"comp":32,"canc":15,"rev":7673.0,"crev":2814.21,"con":4660.91,"net":-2068.9},{"m":"Feb","calls":124.0,"booked":63.0,"lsacomp":41.0,"quo":44.0,"noq":17.0,"leads":123.0,"cost":7115.31,"comp":38,"canc":15,"rev":11179.32,"crev":2814.0,"con":6920.14,"net":-195.17},{"m":"Mar","calls":135.0,"booked":76.0,"lsacomp":56.0,"quo":38.0,"noq":18.0,"leads":132.0,"cost":7722.05,"comp":53,"canc":19,"rev":11855.0,"crev":4635.6,"con":7147.85,"net":-574.2},{"m":"Apr","calls":108.0,"booked":61.0,"lsacomp":42.0,"quo":26.0,"noq":19.0,"leads":109.0,"cost":7024.75,"comp":45,"canc":25,"rev":13500.4,"crev":5054.4,"con":8370.27,"net":1345.52},{"m":"May","calls":81.0,"booked":40.0,"lsacomp":31.0,"quo":22.0,"noq":18.0,"leads":101.0,"cost":5656.67,"comp":24,"canc":10,"rev":6010.5,"crev":2103.0,"con":3667.04,"net":-1989.63},{"m":"Jun","calls":79.0,"booked":44.0,"lsacomp":34.0,"quo":15.0,"noq":12.0,"leads":62.0,"cost":3927.15,"comp":25,"canc":12,"rev":6656.76,"crev":1982.0,"con":4085.03,"net":157.88},{"m":"Jul","calls":77.0,"booked":44.0,"lsacomp":35.0,"quo":27.0,"noq":15.0,"leads":72.0,"cost":4299.94,"comp":26,"canc":11,"rev":7043.99,"crev":2398.0,"con":4329.47,"net":29.53},{"m":"Aug","calls":77.0,"booked":39.0,"lsacomp":33.0,"quo":17.0,"noq":26.0,"leads":99.0,"cost":4982.86,"comp":22,"canc":14,"rev":5794.4,"crev":2992.4,"con":3552.25,"net":-1430.61},{"m":"Sep","calls":115.0,"booked":45.0,"lsacomp":29.0,"quo":21.0,"noq":48.0,"leads":112.0,"cost":6177.91,"comp":33,"canc":18,"rev":9857.96,"crev":3562.2,"con":6109.83,"net":-68.08}],"zones":[{"zone":"Zone 1","comp":120.0,"canc":47.0,"jobs":167.0,"quo":94.0,"noq":101.0,"leads":406.0,"cost":22668.98,"rev":32755.64,"crev":9314.6,"con":20146.28,"net":-2522.7,"monthly":[3855.0,4541.92,4790.0,3935.0,1480.0,2292.36,2614.0,2490.2,6757.16]},{"zone":"Zone 2","comp":57.0,"canc":29.0,"jobs":86.0,"quo":82.0,"noq":38.0,"leads":237.0,"cost":14113.9,"rev":13917.2,"crev":5563.0,"con":8469.52,"net":-5644.38,"monthly":[2133.0,2631.0,3403.0,2617.4,1336.8,533.0,306.0,474.0,483.0]},{"zone":"Zone 3","comp":108.0,"canc":51.0,"jobs":159.0,"quo":72.0,"noq":52.0,"leads":282.0,"cost":16469.25,"rev":27656.49,"crev":10963.0,"con":16909.85,"net":440.6,"monthly":[1546.0,3832.4,2771.0,3941.0,2834.7,3831.4,3690.99,2591.2,2617.8]},{"zone":"Zone 4","comp":13.0,"canc":12.0,"jobs":25.0,"quo":1.0,"noq":0.0,"leads":7.0,"cost":384.32,"rev":5242.0,"crev":2515.21,"con":3317.14,"net":2932.82,"monthly":[139.0,174.0,891.0,3007.0,359.0,0.0,433.0,239.0,0.0]},{"zone":"Putnam","comp":0.0,"canc":0.0,"jobs":0.0,"quo":0.0,"noq":0.0,"leads":0.0,"cost":0.0,"rev":0.0,"crev":0.0,"con":0.0,"net":0.0,"monthly":[0,0,0,0,0,0,0,0,0]}],"zips":[{"zip":"32092","zone":"Zone 1","on":true,"comp":19,"canc":8,"rev":6171.2},{"zip":"32086","zone":"Zone 1","on":true,"comp":23,"canc":3,"rev":5506.56},{"zip":"32084","zone":"Zone 1","on":true,"comp":21,"canc":9,"rev":5037.8},{"zip":"32082","zone":"Zone 3","on":true,"comp":20,"canc":11,"rev":4928.5},{"zip":"32259","zone":"Zone 1","on":true,"comp":17,"canc":6,"rev":4788.0},{"zip":"32080","zone":"Zone 1","on":true,"comp":13,"canc":4,"rev":4279.16},{"zip":"32225","zone":"Zone 3","on":true,"comp":12,"canc":5,"rev":3802.4},{"zip":"32224","zone":"Zone 3","on":true,"comp":16,"canc":6,"rev":3787.4},{"zip":"32081","zone":"Zone 3","on":true,"comp":9,"canc":4,"rev":3186.99},{"zip":"32250","zone":"Zone 3","on":true,"comp":13,"canc":6,"rev":2933.0},{"zip":"32095","zone":"Zone 1","on":true,"comp":11,"canc":4,"rev":2777.0},{"zip":"32256","zone":"Zone 3","on":false,"comp":11,"canc":3,"rev":2738.0},{"zip":"32065","zone":"Zone 2","on":true,"comp":9,"canc":2,"rev":2063.0},{"zip":"32097","zone":"Zone 4","on":false,"comp":1,"canc":1,"rev":2001.0},{"zip":"32073","zone":"Zone 2","on":true,"comp":7,"canc":0,"rev":1992.2},{"zip":"32216","zone":"Zone 3","on":true,"comp":8,"canc":3,"rev":1970.2},{"zip":"32257","zone":"Zone 1","on":true,"comp":6,"canc":2,"rev":1858.92},{"zip":"32068","zone":"Zone 2","on":true,"comp":7,"canc":2,"rev":1845.0},{"zip":"32003","zone":"Zone 2","on":true,"comp":6,"canc":2,"rev":1791.0},{"zip":"32244","zone":"Zone 2","on":false,"comp":6,"canc":3,"rev":1519.0},{"zip":"32233","zone":"Zone 3","on":true,"comp":5,"canc":4,"rev":1483.0},{"zip":"32034","zone":"Zone 4","on":false,"comp":4,"canc":0,"rev":1363.0},{"zip":"32218","zone":"Zone 4","on":false,"comp":5,"canc":6,"rev":1301.0},{"zip":"32246","zone":"Zone 3","on":true,"comp":5,"canc":4,"rev":1173.0},{"zip":"32223","zone":"Zone 1","on":true,"comp":4,"canc":7,"rev":1040.0},{"zip":"32205","zone":"Zone 2","on":true,"comp":5,"canc":1,"rev":922.0},{"zip":"32043","zone":"Zone 2","on":false,"comp":4,"canc":5,"rev":869.0},{"zip":"32222","zone":"Zone 2","on":false,"comp":3,"canc":2,"rev":746.0},{"zip":"32063","zone":"Zone 2","on":false,"comp":3,"canc":0,"rev":727.0},{"zip":"32033","zone":"Zone 1","on":true,"comp":3,"canc":1,"rev":715.0},{"zip":"32211","zone":"Zone 3","on":true,"comp":4,"canc":0,"rev":682.0},{"zip":"32210","zone":"Zone 2","on":false,"comp":3,"canc":6,"rev":547.0},{"zip":"32258","zone":"Zone 1","on":false,"comp":2,"canc":3,"rev":443.0},{"zip":"32207","zone":"Zone 3","on":false,"comp":2,"canc":1,"rev":390.0},{"zip":"32221","zone":"Zone 2","on":false,"comp":1,"canc":1,"rev":259.0},{"zip":"32046","zone":"Zone 4","on":false,"comp":1,"canc":0,"rev":239.0},{"zip":"32254","zone":"Zone 2","on":false,"comp":1,"canc":2,"rev":229.0},{"zip":"32234","zone":"Zone 2","on":false,"comp":1,"canc":0,"rev":209.0},{"zip":"32220","zone":"Zone 2","on":false,"comp":1,"canc":1,"rev":199.0},{"zip":"32277","zone":"Zone 3","on":false,"comp":1,"canc":1,"rev":199.0},{"zip":"32266","zone":"Zone 3","on":true,"comp":1,"canc":1,"rev":199.0},{"zip":"32226","zone":"Zone 4","on":false,"comp":1,"canc":2,"rev":199.0},{"zip":"32217","zone":"Zone 3","on":false,"comp":1,"canc":1,"rev":184.0},{"zip":"32208","zone":"Zone 4","on":false,"comp":1,"canc":0,"rev":139.0},{"zip":"32085","zone":"Zone 1","on":false,"comp":1,"canc":0,"rev":139.0},{"zip":"32209","zone":"Zone 2","on":false,"comp":0,"canc":2,"rev":0.0},{"zip":"32219","zone":"Zone 4","on":false,"comp":0,"canc":3,"rev":0.0},{"zip":"32227","zone":"Zone 3","on":true,"comp":0,"canc":1,"rev":0.0}],"locs":[{"loc":"St Augustine","calls":240.0,"comp":102.0,"quo":45.0,"noq":73.0,"leads":255.0,"cost":13666.72,"rev":23324.5,"net":430.7},{"loc":"South Jacksonville","calls":142.0,"comp":48.0,"quo":46.0,"noq":25.0,"leads":132.0,"cost":7841.1,"rev":11361.05,"net":-949.2},{"loc":"East Jacksonville","calls":93.0,"comp":31.0,"quo":38.0,"noq":17.0,"leads":118.0,"cost":6816.35,"rev":6882.92,"net":-2669.79},{"loc":"Orange Park","calls":104.0,"comp":36.0,"quo":35.0,"noq":18.0,"leads":98.0,"cost":5982.72,"rev":7612.62,"net":-1422.26},{"loc":"Jacksonville","calls":95.0,"comp":24.0,"quo":37.0,"noq":14.0,"leads":97.0,"cost":5895.09,"rev":5890.8,"net":-2308.25},{"loc":"Jacksonville Beach","calls":90.0,"comp":42.0,"quo":16.0,"noq":20.0,"leads":82.0,"cost":4888.29,"rev":9267.83,"net":691.15},{"loc":"Pontevedra Beach","calls":89.0,"comp":39.0,"quo":18.0,"noq":15.0,"leads":82.0,"cost":4764.61,"rev":8481.58,"net":333.05},{"loc":"West Jacksonville","calls":36.0,"comp":11.0,"quo":10.0,"noq":5.0,"leads":40.0,"cost":2124.47,"rev":2556.34,"net":-576.72},{"loc":"St Johns","calls":21.0,"comp":13.0,"quo":3.0,"noq":3.0,"leads":19.0,"cost":1161.16,"rev":2864.22,"net":562.87},{"loc":"North Jacksonville","calls":7.0,"comp":5.0,"quo":1.0,"noq":0.0,"leads":7.0,"cost":384.32,"rev":1329.47,"net":431.43},{"loc":"Middleburg","calls":2.0,"comp":0.0,"quo":0.0,"noq":1.0,"leads":2.0,"cost":111.62,"rev":0.0,"net":-111.62}]};
+const LAB=0.30,JF=15,FR=0.03;
+const ZCOL={'Zone 1':'--z1','Zone 2':'--z2','Zone 3':'--z3','Zone 4':'--z4','Putnam':'--z5'};
+const cv=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const sum=(a,k)=>a.reduce((s,x)=>s+(+x[k]||0),0);
+const $=id=>document.getElementById(id);
+const usd=n=>(n<0?'−$':'$')+Math.round(Math.abs(n)).toLocaleString('en-US');
+const usd2=n=>(n<0?'−$':'$')+Math.abs(n).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+const pc=n=>(n*100).toFixed(1)+'%';
+const esc=s=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+
+const M=DATA.months, Zs=DATA.zones;
+const TR=sum(M,'rev'), TC=sum(M,'cost'), TJ=sum(M,'comp'), TK=sum(M,'canc');
+const TCALLS=sum(M,'calls'), TLEADS=sum(M,'leads'), TCON=sum(M,'con'), NET=TCON-TC;
+const TCREV=sum(M,'crev');
+const beMargin=TC/TR, margin=TCON/TR;
+const ticket=TR/TJ, perJob=TCON/TJ-TC/TJ;
+const beTicket=(TC/TJ+JF)/(1-LAB-FR);
+const beConv=(TC/TCALLS)/(TCON/TJ);
+
+/* ---------- tabs ---------- */
+const PAGES=[['overview','Overview'],['monthly','Month by month'],['zones','Zones'],
+             ['zips','Zip codes'],['locs','Locations'],['gap','Closing the gap']];
+const tabs=$('tabs');
+PAGES.forEach(([id,label],i)=>{
+  const b=document.createElement('button');
+  b.type='button'; b.textContent=label; b.id='tab-'+id;
+  b.setAttribute('role','tab'); b.setAttribute('aria-controls','p-'+id);
+  b.setAttribute('aria-selected',i===0?'true':'false');
+  b.addEventListener('click',()=>show(id));
+  tabs.appendChild(b);
+});
+function show(id){
+  PAGES.forEach(([p])=>{
+    $('p-'+p).hidden = p!==id;
+    $('tab-'+p).setAttribute('aria-selected', p===id?'true':'false');
+  });
+  try{ history.replaceState(null,'','#'+id); }catch(e){}
+  window.scrollTo({top:0,behavior:'instant'});
+}
+const h=(location.hash||'').replace('#','');
+if(PAGES.some(([p])=>p===h)) show(h);
+
+/* ---------- KPIs ---------- */
+$('kpis').innerHTML=[
+  ['Charged calls',TCALLS.toLocaleString(),'Leads handled',''],
+  ['Completed jobs',TJ.toLocaleString(),'CRM invoices',''],
+  ['Revenue',usd(TR),'Gross invoiced',''],
+  ['Ad spend',usd(TC),'Live Account Cost',''],
+  ['Result',usd(NET),'After delivery costs',NET>=0?'good':'bad'],
+  ['Per completed job',usd2(perJob),'Contribution less ad cost',perJob>=0?'good':'bad']
+].map(([k,v,n,c])=>`<div class="kpi"><div class="k">${k}</div><div class="v ${c}">${v}</div><div class="n">${n}</div></div>`).join('');
+
+$('verdict').innerHTML=
+ `<h3>The channel is short by ${usd(TC-TCON)} over nine months</h3>`+
+ `<p>Completed jobs contributed ${usd(TCON)} once labor, the $15 job fee and the 3% franchise fee were paid. `+
+ `Google billed ${usd(TC)} for the leads that produced them, leaving a gap of about ${usd((TC-TCON)/9)} a month, `+
+ `or ${usd2(Math.abs(perJob))} on every job.</p>`+
+ `<p>The contribution margin is ${pc(margin)}. Covering the ad spend needs ${pc(beMargin)} &mdash; a gap of `+
+ `${((beMargin-margin)*100).toFixed(1)} points. These costs exclude supplies, fuel, vehicle and insurance, so this is the best case.</p>`;
+
+/* ---------- chart helpers ---------- */
+function svg(w,h,inner){return `<svg viewBox="0 0 ${w} ${h}" role="img" width="100%">${inner}</svg>`;}
+function txt(x,y,s,{size=11,anchor='middle',fill='--ink-3',weight=400,mono=true}={}){
+  return `<text x="${x}" y="${y}" text-anchor="${anchor}" font-size="${size}" font-weight="${weight}" `+
+  `fill="${cv(fill)}" font-family="${mono?cv('--mono'):cv('--body')}">${esc(s)}</text>`;
+}
+function grid(x0,x1,ys){return ys.map(([y])=>`<line x1="${x0}" y1="${y}" x2="${x1}" y2="${y}" stroke="${cv('--line')}" stroke-width="1"/>`).join('');}
+
+/* net by month */
+(function(){
+  const W=860,H=300,L=62,R=14,T=18,B=40;
+  const vals=M.map(m=>m.net);
+  const lo=Math.min(0,...vals)*1.18, hi=Math.max(0,...vals)*1.35;
+  const y=v=>T+(hi-v)/(hi-lo)*(H-T-B);
+  const bw=(W-L-R)/M.length;
+  const ticks=[0,lo,hi].concat([lo/2,hi/2]).map(v=>[y(v),v]);
+  let s=grid(L,W-R,ticks);
+  s+=`<line x1="${L}" y1="${y(0)}" x2="${W-R}" y2="${y(0)}" stroke="${cv('--ink-3')}" stroke-width="1.4"/>`;
+  ticks.forEach(([yy,v])=>{s+=txt(L-9,yy+4,usd(v),{anchor:'end',size:10.5});});
+  M.forEach((m,i)=>{
+    const x=L+i*bw+bw*0.22, w=bw*0.56;
+    const top=m.net>=0?y(m.net):y(0), hgt=Math.max(2,Math.abs(y(m.net)-y(0)));
+    s+=`<rect x="${x}" y="${top}" width="${w}" height="${hgt}" rx="2.5" fill="${cv(m.net>=0?'--good':'--bad')}"/>`;
+    s+=txt(x+w/2,m.net>=0?top-7:top+hgt+15,usd(m.net),{size:10.5,weight:600,fill:m.net>=0?'--good':'--bad'});
+    s+=txt(x+w/2,H-14,m.m,{size:11.5,fill:'--ink-2',mono:false,weight:600});
+  });
+  $('chart-net').innerHTML=svg(W,H,s);
+})();
+
+/* rates lines */
+(function(){
+  const W=860,H=320,L=48,R=118,T=20,B=38;
+  const series=[['% Booked','--brand',m=>m.booked/m.calls],['% Completed','--good',m=>m.lsacomp/m.calls],
+                ['% Quote','--warn',m=>m.quo/m.calls],['% No quote','--bad',m=>m.noq/m.calls]];
+  const y=v=>T+(0.70-v)/0.70*(H-T-B);
+  const x=i=>L+i*((W-L-R)/(M.length-1));
+  let s=grid(L,W-R,[0,.2,.4,.6].map(v=>[y(v),v]));
+  [0,.2,.4,.6].forEach(v=>{s+=txt(L-9,y(v)+4,(v*100)+'%',{anchor:'end',size:10.5});});
+  series.forEach(([nm,col,fn],si)=>{
+    const pts=M.map((m,i)=>[x(i),y(fn(m))]);
+    s+=`<polyline fill="none" stroke="${cv(col)}" stroke-width="2.4" stroke-linejoin="round" points="${pts.map(p=>p.join(',')).join(' ')}"/>`;
+    pts.forEach(p=>{s+=`<circle cx="${p[0]}" cy="${p[1]}" r="3.4" fill="${cv(col)}"/>`;});
+    const ly=T+18+si*21;
+    s+=`<line x1="${W-R+10}" y1="${ly}" x2="${W-R+30}" y2="${ly}" stroke="${cv(col)}" stroke-width="2.6"/>`;
+    s+=txt(W-R+36,ly+4,nm,{anchor:'start',size:11,fill:'--ink-2',mono:false,weight:600});
+  });
+  M.forEach((m,i)=>{s+=txt(x(i),H-13,m.m,{size:11.5,fill:'--ink-2',mono:false,weight:600});});
+  $('chart-rates').innerHTML=svg(W,H,s);
+})();
+
+/* revenue vs cost */
+(function(){
+  const W=860,H=300,L=66,R=14,T=22,B=40;
+  const hi=Math.max(...M.map(m=>Math.max(m.rev,m.cost)))*1.2;
+  const y=v=>T+(hi-v)/hi*(H-T-B);
+  const bw=(W-L-R)/M.length;
+  let s=grid(L,W-R,[0,4000,8000,12000].map(v=>[y(v),v]));
+  [0,4000,8000,12000].forEach(v=>{s+=txt(L-9,y(v)+4,usd(v),{anchor:'end',size:10.5});});
+  M.forEach((m,i)=>{
+    const x0=L+i*bw+bw*0.14, w=bw*0.33;
+    [[m.rev,'--good',0],[m.cost,'--bad',w+bw*0.06]].forEach(([v,c,off])=>{
+      s+=`<rect x="${x0+off}" y="${y(v)}" width="${w}" height="${Math.max(1,y(0)-y(v))}" rx="2.5" fill="${cv(c)}"/>`;
+    });
+    s+=txt(x0+w*0.5,y(m.rev)-6,usd(m.rev),{size:9.5,fill:'--good',weight:600});
+    s+=txt(x0+w*1.5+bw*0.06,y(m.cost)-6,usd(m.cost),{size:9.5,fill:'--bad',weight:600});
+    s+=txt(L+i*bw+bw/2,H-14,m.m,{size:11.5,fill:'--ink-2',mono:false,weight:600});
+  });
+  s+=`<rect x="${L+6}" y="${T-6}" width="11" height="11" rx="2" fill="${cv('--good')}"/>`;
+  s+=txt(L+22,T+4,'Revenue',{anchor:'start',size:11,fill:'--ink-2',mono:false,weight:600});
+  s+=`<rect x="${L+96}" y="${T-6}" width="11" height="11" rx="2" fill="${cv('--bad')}"/>`;
+  s+=txt(L+112,T+4,'Live Account Cost',{anchor:'start',size:11,fill:'--ink-2',mono:false,weight:600});
+  $('chart-revcost').innerHTML=svg(W,H,s);
+})();
+
+/* zone net horizontal */
+(function(){
+  const rows=Zs.filter(z=>z.jobs||z.leads);
+  const W=860,rh=42,T=16,B=34,L=92,R=20,H=T+rows.length*rh+B;
+  const vals=rows.map(z=>z.net);
+  const lo=Math.min(0,...vals)*1.25, hi=Math.max(0,...vals)*1.6||1000;
+  const x=v=>L+(v-lo)/(hi-lo)*(W-L-R);
+  let s=`<line x1="${x(0)}" y1="${T-4}" x2="${x(0)}" y2="${T+rows.length*rh}" stroke="${cv('--ink-3')}" stroke-width="1.4"/>`;
+  rows.forEach((z,i)=>{
+    const yy=T+i*rh+6, hgt=rh-20;
+    const x0=Math.min(x(0),x(z.net)), w=Math.max(2,Math.abs(x(z.net)-x(0)));
+    s+=`<rect x="${x0}" y="${yy}" width="${w}" height="${hgt}" rx="3" fill="${cv(z.net>=0?'--good':'--bad')}"/>`;
+    s+=txt(L-10,yy+hgt/2+4,z.zone,{anchor:'end',size:12,fill:'--ink-2',mono:false,weight:600});
+    const lx=z.net>=0?x0+w+8:x0-8;
+    s+=txt(lx,yy+hgt/2+4,usd(z.net),{anchor:z.net>=0?'start':'end',size:11,weight:600,fill:z.net>=0?'--good':'--bad'});
+  });
+  $('chart-zone').innerHTML=svg(W,H,s);
+})();
+
+/* zone revenue trend */
+(function(){
+  const W=860,H=300,L=62,R=112,T=18,B=38;
+  const rows=Zs.filter(z=>z.monthly.some(v=>v>0));
+  const hi=Math.max(...rows.flatMap(z=>z.monthly))*1.15;
+  const y=v=>T+(hi-v)/hi*(H-T-B);
+  const x=i=>L+i*((W-L-R)/8);
+  let s=grid(L,W-R,[0,2000,4000,6000].map(v=>[y(v),v]));
+  [0,2000,4000,6000].forEach(v=>{s+=txt(L-9,y(v)+4,usd(v),{anchor:'end',size:10.5});});
+  rows.forEach((z,zi)=>{
+    const col=cv(ZCOL[z.zone]);
+    const pts=z.monthly.map((v,i)=>[x(i),y(v)]);
+    s+=`<polyline fill="none" stroke="${col}" stroke-width="2.4" stroke-linejoin="round" points="${pts.map(p=>p.join(',')).join(' ')}"/>`;
+    pts.forEach(p=>{s+=`<circle cx="${p[0]}" cy="${p[1]}" r="3.2" fill="${col}"/>`;});
+    const ly=T+16+zi*21;
+    s+=`<line x1="${W-R+8}" y1="${ly}" x2="${W-R+28}" y2="${ly}" stroke="${col}" stroke-width="2.6"/>`;
+    s+=txt(W-R+34,ly+4,z.zone,{anchor:'start',size:11,fill:'--ink-2',mono:false,weight:600});
+  });
+  M.forEach((m,i)=>{s+=txt(x(i),H-13,m.m,{size:11.5,fill:'--ink-2',mono:false,weight:600});});
+  $('chart-ztrend').innerHTML=svg(W,H,s);
+})();
+
+/* location conversion */
+(function(){
+  const rows=DATA.locs.filter(l=>l.calls>0).slice().sort((a,b)=>(b.comp/b.calls)-(a.comp/a.calls));
+  const W=860,rh=34,T=26,B=30,L=160,R=70,H=T+rows.length*rh+B;
+  const hi=0.80;
+  const x=v=>L+v/hi*(W-L-R);
+  let s='';
+  s+=`<line x1="${x(beConv)}" y1="${T-10}" x2="${x(beConv)}" y2="${T+rows.length*rh}" stroke="${cv('--bad')}" stroke-width="1.6" stroke-dasharray="5 4"/>`;
+  s+=txt(x(beConv)+7,T-14,'Break-even '+pc(beConv),{anchor:'start',size:11,weight:600,fill:'--bad'});
+  rows.forEach((l,i)=>{
+    const v=l.comp/l.calls, yy=T+i*rh+5, hgt=rh-15;
+    s+=`<rect x="${L}" y="${yy}" width="${Math.max(2,x(v)-L)}" height="${hgt}" rx="3" fill="${cv(v>=beConv?'--good':'--bad')}"/>`;
+    s+=txt(L-10,yy+hgt/2+4,l.loc,{anchor:'end',size:11.5,fill:'--ink-2',mono:false,weight:600});
+    s+=txt(x(v)+7,yy+hgt/2+4,pc(v),{anchor:'start',size:11,weight:600,fill:'--ink-2'});
+  });
+  $('chart-loc').innerHTML=svg(W,H,s);
+})();
+
+/* ---------- tables ---------- */
+function table(el,head,rows,tot){
+  let s='<thead><tr>'+head.map(h=>`<th>${h}</th>`).join('')+'</tr></thead><tbody>';
+  rows.forEach(r=>{s+='<tr>'+r.map(c=>typeof c==='object'?`<td class="${c.c||''}">${c.v}</td>`:`<td>${c}</td>`).join('')+'</tr>';});
+  if(tot) s+='<tr class="tot">'+tot.map(c=>typeof c==='object'?`<td class="${c.c||''}">${c.v}</td>`:`<td>${c}</td>`).join('')+'</tr>';
+  $(el).innerHTML=s+'</tbody>';
+}
+const sgn=v=>({v:usd(v),c:v>=0?'pos':'neg'});
+
+/* quarterly */
+(function(){
+  const Q=[['Q1 Jan–Mar',0,3],['Q2 Apr–Jun',3,6],['Q3 Jul–Sep',6,9]];
+  const rows=Q.map(([lab,a,b])=>{
+    const s=M.slice(a,b);
+    const calls=sum(s,'calls'),j=sum(s,'comp'),r=sum(s,'rev'),c=sum(s,'cost'),con=sum(s,'con');
+    return [lab,calls.toLocaleString(),j,pc(j/calls),usd(r),usd(con),usd(c),sgn(con-c),(r/c).toFixed(2)+'x'];
+  });
+  table('t-qtr',['Quarter','Charged calls','Jobs','Conversion','Revenue','Contribution','Ad spend','Result','ROAS'],rows,
+    ['Total',TCALLS.toLocaleString(),TJ,pc(TJ/TCALLS),usd(TR),usd(TCON),usd(TC),sgn(NET),(TR/TC).toFixed(2)+'x']);
+})();
+
+/* monthly */
+table('t-month',
+  ['Month','Charged calls','Booked','Quotes','No quote','Charged leads','Ad spend','CRM completed','Cancelled','Revenue','Result'],
+  M.map(m=>[m.m,m.calls,m.booked,m.quo,m.noq,m.leads,usd(m.cost),m.comp,m.canc,usd(m.rev),sgn(m.net)]),
+  ['Total',TCALLS,sum(M,'booked'),sum(M,'quo'),sum(M,'noq'),TLEADS,usd(TC),TJ,TK,usd(TR),sgn(NET)]);
+
+/* zones */
+(function(){
+  const rows=Zs.map(z=>[
+    `<span class="zchip" style="background:${cv(ZCOL[z.zone])}"></span>${z.zone}`,
+    z.jobs,z.canc,z.comp,z.quo,z.noq,z.leads,usd(z.rev),
+    z.jobs?pc(z.comp/z.jobs):'—', usd(z.cost), sgn(z.net)]);
+  table('t-zone',['Zone','CRM jobs','Cancelled','Completed','Quotes','No quote','Charged leads','Revenue','Conversion','Ad spend','Result'],rows,
+    ['All zones',sum(Zs,'jobs'),sum(Zs,'canc'),sum(Zs,'comp'),sum(Zs,'quo'),sum(Zs,'noq'),sum(Zs,'leads'),
+     usd(sum(Zs,'rev')),pc(sum(Zs,'comp')/sum(Zs,'jobs')),usd(sum(Zs,'cost')),sgn(sum(Zs,'net'))]);
+})();
+
+/* zips */
+(function(){
+  const rows=DATA.zips.map(z=>[
+    z.zip,
+    `<span class="zchip" style="background:${cv(ZCOL[z.zone])}"></span>${z.zone}`,
+    `<span class="pill ${z.on?'on':'off'}">${z.on?'ON':'OFF'}</span>`,
+    z.comp,z.canc,z.comp+z.canc,(z.comp+z.canc)?pc(z.canc/(z.comp+z.canc)):'—',usd(z.rev),
+    z.comp?usd2(z.rev/z.comp):'—']);
+  const tc=sum(DATA.zips,'comp'),tk=sum(DATA.zips,'canc'),tr=sum(DATA.zips,'rev');
+  table('t-zip',['Zip','Zone','Geo-target','Completed','Cancelled','Jobs booked','Cancel rate','Revenue','Avg ticket'],rows,
+    ['Total','','',tc,tk,tc+tk,pc(tk/(tc+tk)),usd(tr),usd2(tr/tc)]);
+})();
+
+/* locations */
+(function(){
+  const rows=DATA.locs.map(l=>[l.loc,l.calls,l.comp,l.calls?pc(l.comp/l.calls):'—',
+    l.quo,l.noq,l.leads,usd(l.cost),usd(l.rev),sgn(l.net)]);
+  table('t-loc',['Location','Charged calls','Completed','Conversion','Quotes','No quote','Charged leads','Ad spend','Revenue','Result'],rows,
+    ['Total',sum(DATA.locs,'calls'),sum(DATA.locs,'comp'),pc(sum(DATA.locs,'comp')/sum(DATA.locs,'calls')),
+     sum(DATA.locs,'quo'),sum(DATA.locs,'noq'),sum(DATA.locs,'leads'),usd(sum(DATA.locs,'cost')),
+     usd(sum(DATA.locs,'rev')),sgn(sum(DATA.locs,'net'))]);
+})();
+
+/* levers */
+const extraJobs=Math.round(TCALLS*beConv)-TJ;
+$('levers').innerHTML=[
+ ['Lever 1','Raise the average ticket',usd2(beTicket),
+  `from ${usd2(ticket)} &mdash; up ${usd2(beTicket-ticket)}, or ${pc((beTicket-ticket)/ticket)}`,
+  'Upsell additional rooms, protectant or upholstery at the point of booking.'],
+ ['Lever 2','Improve lead conversion',pc(beConv),
+  `from ${pc(TJ/TCALLS)} &mdash; ${extraJobs} more jobs over nine months, about ${Math.round(extraJobs/9)} a month`,
+  'Faster call answering, fewer missed calls, structured follow-up on saved quotes.'],
+ ['Lever 3','Reduce ad spend',usd(TCON),
+  `from ${usd(TC)} &mdash; down ${usd(TC-TCON)}, or ${pc((TC-TCON)/TC)}`,
+  'Not an across-the-board cut. Trim the locations returning least per charged lead and keep the leads that convert.']
+].map(([n,t,big,from,how])=>
+ `<div class="lever"><div class="n">${n}</div><h4>${t}</h4><div class="big">${big}</div>`+
+ `<div class="from">${from}</div><div class="how">${how}</div></div>`).join('');
+
+/* cost basis */
+table('t-cost',['Line item','Amount','Share of revenue'],[
+  ['Gross revenue',usd(TR),'100.0%'],
+  ['Less: labor (30%)',usd(-TR*LAB),pc(-LAB)],
+  ['Less: job fee ($15 × '+TJ+' jobs)',usd(-TJ*JF),pc(-TJ*JF/TR)],
+  ['Less: franchise fee (3%)',usd(-TR*FR),pc(-FR)]
+],['Contribution from jobs',usd(TCON),pc(margin)]);
+
+$('src').innerHTML=
+ `<p><b>Jobs and revenue:</b> GG5000 campaign reports from the CRM &mdash; Jobs On Schedule and Jobs Cancelled, 1 January to 30 September 2026. `+
+ `Revenue totals ${usd2(TR)} and reconciles to the validation workbook for every month.</p>`+
+ `<p><b>Leads and ad spend:</b> LSA Leads Validation workbook, Summary 2026 tab. Charged leads total ${TLEADS.toLocaleString()}.</p>`+
+ `<p><b>Cost rates:</b> 30% labor and 3% franchise fee on revenue, $15 per completed job, supplied by the franchise owner. `+
+ `Supplies, fuel, vehicle, insurance, VA labour and overhead are not included, so every result here is the best case.</p>`+
+ `<p><b>Scope:</b> First jobs only. Repeat customers and referrals that began as an LSA lead are not counted. `+
+ `${usd(TCREV)} of booked revenue was lost to the ${TK} cancellations and is excluded from revenue.</p>`+
+ `<p><b>Zone assignment:</b> Jobs and revenue by each job&rsquo;s own zip code. Leads, quotes and no-quotes come from the validation `+
+ `workbook, which reports by service location, so locations map to zones: Zone 1 &mdash; St Augustine, St Johns, South Jacksonville; `+
+ `Zone 2 &mdash; Orange Park, Jacksonville, West Jacksonville, Middleburg; Zone 3 &mdash; East Jacksonville, Ponte Vedra Beach, `+
+ `Jacksonville Beach; Zone 4 &mdash; North Jacksonville.</p>`;
+</script>
+
+</body>
+</html>
